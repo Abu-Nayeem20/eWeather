@@ -1,0 +1,21 @@
+
+         body {
+            height: 100vh;
+        }
+        .app-design{
+            width: 300px;
+            height: 550px;
+            margin: auto; 
+            background-color: rgba(0, 0, 255, 0.616);
+            border-radius: 30px;
+
+        }
+        #spinner{
+            display: none;
+            position: absolute;
+            top: 48%;
+            left: 49%;
+        }
+        #not-found{
+            display: none;
+        }
