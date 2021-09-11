@@ -11,7 +11,7 @@ const spinnerStyle = (spinner, content) => {
 // default load for Dhaka city
 
 const loadDefaultCity = () => {
-    const url = `http://api.openweathermap.org/data/2.5/weather?q=${myCity}&units=metric&APPID=${myApiKey}`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${myCity}&units=metric&APPID=${myApiKey}`;
 
     fetch(url)
         .then(res => res.json())
@@ -40,7 +40,7 @@ const disDefaultCity = defaultCity => {
     
         // display icon
         const iconImg = document.getElementById('weather-icon');
-        iconImg.setAttribute('src', `http://openweathermap.org/img/wn/${defaultCity.weather[0].icon}@2x.png`);
+        iconImg.setAttribute('src', `https://openweathermap.org/img/wn/${defaultCity.weather[0].icon}@2x.png`);
 
         // loading spinner
         spinnerStyle('none', 'block');
@@ -65,7 +65,7 @@ const loadWeatherData = () => {
     // loading spinner
     spinnerStyle('block', 'none');
 
-    const url = `http://api.openweathermap.org/data/2.5/weather?q=${cityText}&units=metric&APPID=${myApiKey}`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityText}&units=metric&APPID=${myApiKey}`;
 
 
     fetch(url)
@@ -98,7 +98,7 @@ const displayWeather = (weather, cityText) => {
 
     // display icon
     const iconImg = document.getElementById('weather-icon');
-    iconImg.setAttribute('src', `http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`);
+    iconImg.setAttribute('src', `https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`);
 
      // loading spinner
      spinnerStyle('none', 'block');
